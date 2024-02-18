@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body class="container mx-auto px-5 lg:px-0">
-    <header class="font-raleway">
+<body class="px-5 lg:px-0">
+    <header class="font-raleway container mx-auto ">
         <!------------------ Navbar Section --------------------->
         <div class="navbar py-6">
             <div class="navbar-start">
@@ -80,11 +80,69 @@
 
     <main>
         <!------------------ Best Offer Section --------------------->
-        <div class="lg:py-20 py-7">
+        <div class="lg:py-20 py-7 container mx-auto ">
             <h2 class="text-center text-4xl font-bold">Best offers for you</h2>
             <div class="flex justify-between items-center gap-4 lg:gap-8 mt-6 lg:mt-16">
                 <div class="w-1/2"><img class="w-full" src="./images/offer-1.png" alt=""></div>
                 <div class="w-1/2"><img class="w-full" src="./images/offer-2.png" alt=""></div>
+            </div>
+            <div class="text-center mt-10 lg:mt-28">
+                <button class="btn bg-white border-[#1dd100] text-[#1dd100] text-xl">See All Offers</button>
+            </div>
+        </div>
+
+        <!------------------ Seat Section --------------------->
+        <div class="bg-[#f7f8f8] rounded-3xl border-t-2 border-[#1dd100]">
+            <div class="container mx-auto">
+                <div class="text-center pt-6 pb-6 lg:pb-0 lg:pt-16">
+                    <h2 class="text-center text-4xl font-bold">P.H Paribahan</h2>
+                    <p class="lg:w-1/2 w-full mx-auto px-2 lg:px-0 pt-6">Yes, you can run unit tests and view the
+                        results directly within the
+                        app. The integrated testing
+                        features allow for a streamlined.</p>
+                </div>
+                <div class="flex flex-col lg:flex-row justify-between lg:pt-10 pt-10">
+                    <div class="lg:w-9/12 w-full bg-white lg:p-8 lg:pr-16 lg:rounded-r-[50px] ">
+                        <div class="flex lg:flex-row flex-col justify-between items-center rounded-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="mt-9 lg:mt-0"><img src="./images/bus-logo.png" alt=""></div>
+                                <div class="pt-10 lg:pt-0">
+                                    <h2 class="lg:text-3xl text-2xl font-bold">Greenline Paribahan</h2>
+                                    <p>Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <div class="pt-10 lg:pt-0">
+                                <a
+                                    class="btn lg:text-xl text-base border-[#2ad40f] font-bold text-[#2ad40f] bg-[#e8fae5]">
+                                    <img src="./images/seat-green.png" alt="">
+                                    40 Seats left
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 p-8 items-center w-full bg-[#f7f8f8] rounded-lg mt-6">
+                            <p class="py-5 border-b-2 border-dashed">Route</p>
+                            <p class="text-right py-5 border-b-2 border-dashed">Dhaka - Sylhet</p>
+                            <p class="py-5 border-b-2 border-dashed">Departure Time</p>
+                            <p class="text-right py-5 border-b-2 border-dashed">9:00 PM</p>
+
+                        </div>
+                        <div class="flex lg:flex-row flex-col gap-4 justify-around mt-5">
+                            <button class="btn">Boarding Point - Laxmipur</button>
+                            <button class="btn">Dropping Point - Bogura</button>
+                            <button class="btn">Est. Time - 11 Hour</button>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-r-lg p-6 w-full lg:w-1/4 flex justify-center items-center lg:rounded-l-[50px] rounded-l-lg">
+                        <div class="text-center">
+                            <div class="ml-8"><img src="./images/fare.png" alt=""></div>
+                            <h2 class="text-3xl font-bold">550 Taka</h2>
+                            <h3 class="font-semibold">Per Seat</h3>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </main>
