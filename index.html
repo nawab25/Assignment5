@@ -12,8 +12,71 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body>
-    
+<body class="container mx-auto px-5 lg:px-0">
+    <header class="font-raleway">
+        <!------------------ Navbar Section --------------------->
+        <div class="navbar py-6">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a class="font-medium">Home</a></li>
+                        <li><a class="font-medium">About</a></li>
+                        <li><a class="font-medium">Destination</a></li>
+                        <li><a class="font-medium">Search</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost font-semibold lg:font-extrabold text-2xl lg:text-4xl">P-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a class="font-medium">Home</a></li>
+                    <li><a class="font-medium">About</a></li>
+                    <li><a class="font-medium">Destination</a></li>
+                    <li><a class="font-medium">Search</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn lg:text-xl text-base border-[#2ad40f] font-bold text-[#2ad40f] bg-[#e8fae5]">Bus
+                    <img src="./images/bus-icon.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <!------------------ Banner Section --------------------->
+        <div
+            class="lg:min-h-[80vh] min-h-[45vh] rounded-lg text-center bg-[url(./images/banner.png)] bg-no-repeat bg-cover bg-center ">
+            <div class="pt-12">
+                <h1 class="md:text-[64px] text-[32px] font-extrabold"><span class="text-white">End-to-End Travel
+                        with</span> <br>
+                    <span class="text-[#1dd100]">P Paribahan</span>
+                </h1>
+                <p class="text-[#FFFFFF] lg:w-1/2 w-full mx-auto">Yes, you can run unit tests and view the results
+                    directly within the app. The integrated testing
+                    features allow for a streamlined .</p>
+                <button class="btn mt-6 text-[#000] font-bold bg-[#1dd100] text-xl border-none ">Buy Tickets</button>
+            </div>
+
+        </div>
+        <div class="flex justify-center lg:gap-20 gap-4 relative lg:-top-16 -top-6 px-4 lg:px-0">
+            <div>
+                <img src="./images/pic-1.png" alt="">
+            </div>
+            <div>
+                <img src="./images/pic-2.png" alt="">
+            </div>
+            <div>
+                <img src="./images/pic-3.png" alt="">
+            </div>
+        </div>
+    </header>
 
     <script src="./scripts/script.js"></script>
 </body>
