@@ -12,3 +12,7 @@
 .font-inter {
     font-family: "Inter", sans-serif;
 }
+table tr {
+    display: flex;
+    justify-content: space-between;
+}
