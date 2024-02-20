@@ -11,9 +11,9 @@ const cuponBox = document.getElementById('cupon-box');
 //Create element function
 function createElementValue(id, value) {
     let element = document.getElementById(id);
-    const para = document.createElement('p');
-    para.innerText = value;
-    element.appendChild(para);
+    const h4 = document.createElement('h4');
+    h4.innerText = value;
+    element.appendChild(h4);
 }
 //hide element function
 function hideElementById(id) {
@@ -26,18 +26,28 @@ function innerTextById(id, value) {
     element.innerText = value;
 }
 let count = 0;
+let arr = [];
 //function for click seat button
 const seatNumber = document.querySelectorAll("#seat-btn");
 for (let seat of seatNumber) {
-    seat.addEventListener("click", function (e) {  
+    seat.addEventListener("click", function (e) {
+        //add color
         seat.classList.add("bg-[#2ad40f]");
-        seat.classList.add("text-white");     
-        count = count + 1;
-        if(count >= 5) {
-            alert('can not buy more than 4 seat at a time!');
-            return;
+        seat.classList.add("text-white");
+        seat.classList.add("selected");
+
+        //can not buy more than 4 seat  
+        count++;
+        if (count >= 5) {
+            seat.classList.remove("bg-[#2ad40f]");
+            seat.classList.remove("text-white");
+            return alert("Sorry! You can't buy more than 4 seat.");
         }
-        
+        arr.push(e.target.innerText);
+        if(arr.includes(e.target.innerText)) {
+            
+        }
+        //decrease seat from total seat number
         let convertedSeat = parseInt(totalSeat.innerText);
         innerTextById('total-seat', convertedSeat - 1);
 
@@ -69,9 +79,14 @@ for (let seat of seatNumber) {
         //Grand total price
         GrandTotal.innerText = finalPrice;
 
+        //enable the apply button
+        if(count === 4) {
+            applyCuponBtn.removeAttribute('disabled');
+        }
 
     })
 }
+
 
 //use cupon
 applyCuponBtn.addEventListener('click', function () {
@@ -81,7 +96,7 @@ applyCuponBtn.addEventListener('click', function () {
         let discountPrice = GrandTotal.innerText - discount;
         innerTextById("grand-total", discountPrice);
         hideElementById('input');
-        let discountString = `You have got ${discount} taka discount for cupon!!`;
+        let discountString = `Discount -${discount}`;
         createElementValue('discount-area', discountString);
     }
     else if (cuponValue === "Couple 20") {
@@ -89,25 +104,22 @@ applyCuponBtn.addEventListener('click', function () {
         let discountPrice = GrandTotal.innerText - discount;
         innerTextById("grand-total", discountPrice);
         hideElementById('input');
-        let discountString = `You have got ${discount} taka discount for cupon!!`;
+        let discountString = `Discount -${discount}`;
         createElementValue('discount-area', discountString);
     }
     else {
-        innerTextById("grand-total", totalPrice.innerText);
+        alert("Invalid cupon!!")
     }
 });
 
 
-//passenger form validation
+//passenger form input validation
 const nextBtn = document.getElementById('next-btn');
 const phoneInput = document.getElementById('phone-input');
 let value = parseInt(phoneInput.value);
-phoneInput.addEventListener('input', function () {
-    if (value > 1) {
-        nextBtn.disabled = true;
-    }
-    else {
-        nextBtn.disabled = false;
+phoneInput.addEventListener('keyup', function (e) {
+    if (e.target.value.length > 0 && count > 0) {
+        nextBtn.removeAttribute('disabled');
     }
 });
 

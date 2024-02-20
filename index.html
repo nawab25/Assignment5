@@ -61,7 +61,8 @@
                 <p class="text-[#FFFFFF] lg:w-1/2 w-full mx-auto">Yes, you can run unit tests and view the results
                     directly within the app. The integrated testing
                     features allow for a streamlined .</p>
-                <a href="#seat-section" class="btn mt-6 text-[#000] font-bold bg-[#1dd100] text-xl border-none ">Buy Tickets</a>
+                <a href="#seat-section" class="btn mt-6 text-[#000] font-bold bg-[#1dd100] text-xl border-none ">Buy
+                    Tickets</a>
             </div>
 
         </div>
@@ -227,7 +228,8 @@
                         <!-- Pricing field  -->
                         <div class="bg-[#f7f8f8] p-9 mt-7 rounded-lg">
                             <div class="grid grid-cols-3 justify-between border-b-2 border-dashed pb-5">
-                                <h4 class="text-xl font-semibold">Seat<div id="seat-count" class="badge bg-[#2ad40f] text-white">0</div>
+                                <h4 class="text-xl font-semibold">Seat<div id="seat-count"
+                                        class="badge bg-[#2ad40f] text-white">0</div>
                                 </h4>
                                 <h4 class="text-xl font-semibold text-center">Class</h4>
                                 <h4 class="text-xl font-semibold text-right">Price</h4>
@@ -244,9 +246,11 @@
                             </div>
                             <!-- Apply cuppon input field  -->
                             <div id="discount-area" class="text-center mt-5">
-                                <div id="input"  class="join">
-                                    <input id="cupon-box" class="input input-bordered join-item" placeholder="Have any copupon?" />
-                                    <button id="apply-btn" class="btn join-item rounded-lg bg-[#2ad40f] text-white">Apply</button>
+                                <div id="input" class="join">
+                                    <input id="cupon-box" class="input input-bordered join-item"
+                                        placeholder="Have any copupon?" />
+                                    <button id="apply-btn" disabled
+                                        class="btn join-item rounded-lg bg-[#2ad40f] text-white">Apply</button>
                                 </div>
                             </div>
                             <!-- Grand total  -->
@@ -257,19 +261,43 @@
                         </div>
                         <!-- Passenger bio form-->
                         <div class="pt-6">
-                                <h4 class="pb-2 font-semibold text-lg">Passenger Name*</h4>
-                                <input id="name-input" type="text" placeholder="Enter your name"
-                                    class="input input-bordered w-full mb-4" />
+                            <h4 class="pb-2 font-semibold text-lg">Passenger Name*</h4>
+                            <input id="name-input" required type="text" placeholder="Enter your name"
+                                class="input input-bordered w-full mb-4" />
 
-                                <h4 class="pb-2 font-semibold text-lg">Phone Number*</h4>
-                                <input id="phone-input" type="number" placeholder="Enter your phone number"
-                                    class="input input-bordered w-full mb-4" />
+                            <h4 class="pb-2 font-semibold text-lg">Phone Number*</h4>
+                            <input required id="phone-input" type="number" placeholder="Enter your phone number"
+                                class="input input-bordered w-full mb-4" />
 
-                                <h4 class="pb-2 font-semibold text-lg">Email Id</h4>
-                                <input type="email" placeholder="Enter your email id"
-                                    class="input input-bordered w-full mb-7" />
+                            <h4 class="pb-2 font-semibold text-lg">Email Id</h4>
+                            <input required type="email" placeholder="Enter your email id"
+                                class="input input-bordered w-full mb-7" />
 
-                                <button disabled id="next-btn" class="btn bg-[#2ad40f] w-full text-white text-xl font-bold" onclick="showModal()">Next</button>
+                            <button disabled id="next-btn" class="btn bg-[#2ad40f] w-full text-white text-xl font-bold"
+                                onclick="my_modal_1.showModal()">Next</button>
+                            <!-- Open the modal using ID.showModal() method -->
+                            <dialog id="my_modal_1" class="modal">
+                                <div class="modal-box text-center">
+                                    <div class="w-full flex justify-center">
+                                        <img src="./images/success.png" alt="">
+                                    </div>
+                                    <h4 class="font-semibold font-inter text-lg">Thank you for Booking Our Bus Seats.
+                                        We are working hard to find the best service and deals for you.
+                                    </h4>
+                                    <p class="py-4">Thank you for Booking Our Bus Seats.
+                                        We are working hard to find the best service and deals for you.
+                                    </p>
+                                    <div>
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <div class="w-full flex justify-center">
+                                                <button class="btn text-lg font-semibold text-white 
+                                            bg-[#2ad40f] rounded-r-full rounded-l-full px-36" onclick="window.location.reload()">Continue</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
 
                             <div class="flex justify-around items-center mt-6">
                                 <p><a href="#" class="underline">Terms and Conditions</a></p>
@@ -289,7 +317,8 @@
             <div class="flex justify-between pb-8 border-b-2 border-dashed border-[gray]">
                 <div class="text-white">
                     <h2 class="text-4xl font-bold">P-Ticket</h2>
-                    <p class="w-9/12 pt-5 text-[gray]">P-Ticket is a digital platform to make your daily commuting better.</p>
+                    <p class="w-9/12 pt-5 text-[gray]">P-Ticket is a digital platform to make your daily commuting
+                        better.</p>
                 </div>
                 <div class="text-white">
                     <h4 class="text-2xl font-semibold pb-5">Download our app</h4>
